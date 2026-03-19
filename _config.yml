@@ -1,3 +1,4 @@
-theme: jekyll-theme-cayman
-title: "Audio Comparison Demo"
-description: "Ground truth vs. generated audio samples"
+theme: minima
+title: "SpeakerShift: Embedding-Space Speaker Trait Conversion"
+description: "Audio samples — Hybrid Attention Mapper vs. Ground Truth"
+show_excerpts: false
