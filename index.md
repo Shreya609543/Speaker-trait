@@ -28,6 +28,13 @@ We propose **HybridAttentionMapper**, a 21.7M-parameter neural network that re-m
 | SVBI (F) | arctic-a0120 | <audio controls><source src="samples/l2artic/SVBI_arctic-a0120_source.wav"></audio> | <audio controls><source src="samples/l2artic/SVBI_a0120_slt.wav"></audio> |
 | SVBI (F) | arctic-a0130 | <audio controls><source src="samples/l2artic/SVBI_arctic-a0130_source.wav"></audio> | <audio controls><source src="samples/l2artic/SVBI_a0130_slt.wav"></audio> |
 
+### VCTK — British English
+
+| Speaker | Utterance | Source (Ground Truth) | Hybrid (Ours) |
+|---|---|---|---|
+| p268 (F) | 020 | <audio controls><source src="samples/VCTK/p268_020_mic2.flac"></audio> | <audio controls><source src="samples/VCTK/p268_020_slt.wav"></audio> |
+| p268 (F) | 027 | <audio controls><source src="samples/VCTK/p268_027_mic1.flac"></audio> | <audio controls><source src="samples/VCTK/p268_027_slt.wav"></audio> |
+
 ### LibriTTS — English
 
 | Speaker | Utterance | Source (Ground Truth) | Hybrid (Ours) |
