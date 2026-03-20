@@ -9,84 +9,56 @@ th { background: #f4f4f4; text-align: center; padding: 0.5em 0.75em; border: 1px
 td { text-align: center; padding: 0.5em 0.75em; border: 1px solid #ddd; vertical-align: middle; }
 td:first-child { text-align: left; font-weight: 500; }
 audio { width: 200px; }
-.section-note { font-size: 0.85em; color: #555; margin: -0.5em 0 1em 0; }
 </style>
 
 **Interspeech 2025** · [Paper](#) · [Code](#) · [Citation](#citation)
 
 ---
 
-We propose **HybridAttentionMapper**, a 21.7M-parameter neural network that re-maps speaker identity embeddings across a static trait boundary (gender) while preserving linguistic content. Below we compare the **ground truth (source)** against our **Hybrid system** across two conversion directions, four corpora, and both accent groups.
+We propose **HybridAttentionMapper**, a 21.7M-parameter neural network that re-maps speaker identity embeddings across a static trait boundary (gender) while preserving linguistic content. Below we compare the **ground truth (source)** against our **Hybrid system** across two conversion directions and multiple corpora.
 
 ---
 
 ## Female → Male
 
-### VCTK — British English
-
-| Speaker | Source (Ground Truth) | Hybrid (Ours) |
-|---|---|---|
-| p268 (F) | <audio controls><source src="samples/vctk/p268_utt01_source.wav"></audio> | <audio controls><source src="samples/vctk/p268_utt01_hybrid.wav"></audio> |
-| p268 (F) | <audio controls><source src="samples/vctk/p268_utt02_source.wav"></audio> | <audio controls><source src="samples/vctk/p268_utt02_hybrid.wav"></audio> |
-| p268 (F) | <audio controls><source src="samples/vctk/p268_utt03_source.wav"></audio> | <audio controls><source src="samples/vctk/p268_utt03_hybrid.wav"></audio> |
-
 ### L2-ARTIC — Hindi L2
 
-| Speaker | Source (Ground Truth) | Hybrid (Ours) |
-|---|---|---|
-| SVBI (F) | <audio controls><source src="samples/l2artic/SVBI_utt01_source.wav"></audio> | <audio controls><source src="samples/l2artic/SVBI_utt01_hybrid.wav"></audio> |
-| SVBI (F) | <audio controls><source src="samples/l2artic/SVBI_utt02_source.wav"></audio> | <audio controls><source src="samples/l2artic/SVBI_utt02_hybrid.wav"></audio> |
-| SVBI (F) | <audio controls><source src="samples/l2artic/SVBI_utt03_source.wav"></audio> | <audio controls><source src="samples/l2artic/SVBI_utt03_hybrid.wav"></audio> |
+| Speaker | Utterance | Source (Ground Truth) | Hybrid (Ours) |
+|---|---|---|---|
+| SVBI (F) | arctic-a0120 | <audio controls><source src="samples/l2artic/SVBI_arctic-a0120_source.wav"></audio> | <audio controls><source src="samples/l2artic/SVBI_a0120_slt.wav"></audio> |
+| SVBI (F) | arctic-a0130 | <audio controls><source src="samples/l2artic/SVBI_arctic-a0130_source.wav"></audio> | <audio controls><source src="samples/l2artic/SVBI_a0130_slt.wav"></audio> |
 
 ### LibriTTS — English
 
-| Speaker | Source (Ground Truth) | Hybrid (Ours) |
-|---|---|---|
-| 1320 | <audio controls><source src="samples/libri/1320_utt01_source.wav"></audio> | <audio controls><source src="samples/libri/1320_utt01_hybrid.wav"></audio> |
-| 2961 | <audio controls><source src="samples/libri/2961_utt01_source.wav"></audio> | <audio controls><source src="samples/libri/2961_utt01_hybrid.wav"></audio> |
-| 3570 | <audio controls><source src="samples/libri/3570_utt01_source.wav"></audio> | <audio controls><source src="samples/libri/3570_utt01_hybrid.wav"></audio> |
+| Speaker | Utterance | Source (Ground Truth) | Hybrid (Ours) |
+|---|---|---|---|
+| 3570 (F) | 5695-000000 | <audio controls><source src="samples/libri/3570_5695_000000_000000_source.wav"></audio> | <audio controls><source src="samples/libri/3570_5695_000000_000000_slt.wav"></audio> |
+| 3570 (F) | 5695-000001 | <audio controls><source src="samples/libri/3570_5695_000001_000003_source.wav"></audio> | <audio controls><source src="samples/libri/3570_5695_000001_000003_slt.wav"></audio> |
 
 ### VCC2020 — Studio English
 
-| Speaker | Source (Ground Truth) | Hybrid (Ours) |
-|---|---|---|
-| SEF1 | <audio controls><source src="samples/vcc2020/SEF1_utt01_source.wav"></audio> | <audio controls><source src="samples/vcc2020/SEF1_utt01_hybrid.wav"></audio> |
-| SEF2 | <audio controls><source src="samples/vcc2020/SEF2_utt01_source.wav"></audio> | <audio controls><source src="samples/vcc2020/SEF2_utt01_hybrid.wav"></audio> |
+| Speaker | Utterance | Source (Ground Truth) | Hybrid (Ours) |
+|---|---|---|---|
+| SEF2 (F) | E30012 | <audio controls><source src="samples/vcc2020/sef2_E30012_source.wav"></audio> | <audio controls><source src="samples/vcc2020/SEF2_E30012_slt.wav"></audio> |
+| SEF2 (F) | E30019 | <audio controls><source src="samples/vcc2020/sef2_E30019_source.wav"></audio> | <audio controls><source src="samples/vcc2020/SEF2_E30019_slt.wav"></audio> |
 
 ---
 
 ## Male → Female
 
-### VCTK — British English
-
-| Speaker | Source (Ground Truth) | Hybrid (Ours) |
-|---|---|---|
-| p258 (M) | <audio controls><source src="samples/vctk/p258_utt01_source.wav"></audio> | <audio controls><source src="samples/vctk/p258_utt01_hybrid.wav"></audio> |
-| p258 (M) | <audio controls><source src="samples/vctk/p258_utt02_source.wav"></audio> | <audio controls><source src="samples/vctk/p258_utt02_hybrid.wav"></audio> |
-| p258 (M) | <audio controls><source src="samples/vctk/p258_utt03_source.wav"></audio> | <audio controls><source src="samples/vctk/p258_utt03_hybrid.wav"></audio> |
-
 ### L2-ARTIC — Hindi L2
 
-| Speaker | Source (Ground Truth) | Hybrid (Ours) |
-|---|---|---|
-| ASI (M) | <audio controls><source src="samples/l2artic/ASI_utt01_source.wav"></audio> | <audio controls><source src="samples/l2artic/ASI_utt01_hybrid.wav"></audio> |
-| ASI (M) | <audio controls><source src="samples/l2artic/ASI_utt02_source.wav"></audio> | <audio controls><source src="samples/l2artic/ASI_utt02_hybrid.wav"></audio> |
-| ASI (M) | <audio controls><source src="samples/l2artic/ASI_utt03_source.wav"></audio> | <audio controls><source src="samples/l2artic/ASI_utt03_hybrid.wav"></audio> |
-
-### LibriTTS — English
-
-| Speaker | Source (Ground Truth) | Hybrid (Ours) |
-|---|---|---|
-| 4507 | <audio controls><source src="samples/libri/4507_utt01_source.wav"></audio> | <audio controls><source src="samples/libri/4507_utt01_hybrid.wav"></audio> |
-| 8230 | <audio controls><source src="samples/libri/8230_utt01_source.wav"></audio> | <audio controls><source src="samples/libri/8230_utt01_hybrid.wav"></audio> |
-| SEM1 | <audio controls><source src="samples/vcc2020/SEM1_utt01_source.wav"></audio> | <audio controls><source src="samples/vcc2020/SEM1_utt01_hybrid.wav"></audio> |
+| Speaker | Utterance | Source (Ground Truth) | Hybrid (Ours) |
+|---|---|---|---|
+| ASI (M) | arctic-a0009 | <audio controls><source src="samples/l2artic/ASI_arctic-a0009_source.wav"></audio> | <audio controls><source src="samples/l2artic/ASI_a0009_slt.wav"></audio> |
+| ASI (M) | arctic-a0017 | <audio controls><source src="samples/l2artic/ASI_arctic-a0017_source.wav"></audio> | <audio controls><source src="samples/l2artic/ASI_a0017_slt.wav"></audio> |
 
 ### VCC2020 — Studio English
 
-| Speaker | Source (Ground Truth) | Hybrid (Ours) |
-|---|---|---|
-| SEM1 | <audio controls><source src="samples/vcc2020/SEM1_utt01_source.wav"></audio> | <audio controls><source src="samples/vcc2020/SEM1_utt01_hybrid.wav"></audio> |
-| SEM2 | <audio controls><source src="samples/vcc2020/SEM2_utt01_source.wav"></audio> | <audio controls><source src="samples/vcc2020/SEM2_utt01_hybrid.wav"></audio> |
+| Speaker | Utterance | Source (Ground Truth) | Hybrid (Ours) |
+|---|---|---|---|
+| SEM1 (M) | E30006 | <audio controls><source src="samples/vcc2020/sem1_E30006_source.wav"></audio> | <audio controls><source src="samples/vcc2020/SEM1_E30006_slt.wav"></audio> |
+| SEM1 (M) | E30016 | <audio controls><source src="samples/vcc2020/sem1_E30016_source.wav"></audio> | <audio controls><source src="samples/vcc2020/SEM1_E30016_slt.wav"></audio> |
 
 ---
 
